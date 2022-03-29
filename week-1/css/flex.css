@@ -22,7 +22,7 @@
 
 @media (min-width: 500px) {
     .content-box{
-        flex: 0 1 40%;
+        flex: 1 1 40%;
     }
 }
 
@@ -36,7 +36,10 @@
     }
 
 @media (min-width:1200px){
+
     .content-box{
+        flex: 1 1 40%;
         max-width: 600px;
+        align-self: center;
     }    
 }
