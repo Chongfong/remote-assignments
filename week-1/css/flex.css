@@ -36,9 +36,15 @@
     }
 
 @media (min-width:1200px){
+    .content-container{
+        width:100%;
+        margin:auto;
+        max-width: 1300px;
+        justify-content: center;}
 
     .content-box{
-        flex: 1 1 40%;
+        width:100%
+        flex: 1 0 600px;
         max-width: 600px;
         align-self: center;
     }    
