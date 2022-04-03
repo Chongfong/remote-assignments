@@ -4,43 +4,31 @@ function changewords(){
     document.querySelector("#welcome").innerHTML = "Have a Good Time! :)"
 }
 
-const menu = document.querySelector(".main-nav");
-const menuItems = document.querySelectorAll(".menuItem");
-const mainnav= document.querySelector(".mainnav");
-const closeIcon= document.querySelector("#closed");
-const menuIcon = document.querySelector("#burger");
-
-// function toggleMenu() {
-//   if (menu.classList.contains("showMenu")) {
-//     menu.classList.remove("showMenu");
-//     closeIcon.style.display = "none";
-//     menuIcon.style.display = "block";
-//   } else {
-//     menu.classList.add("showMenu");
-//     closeIcon.style.display = "block";
-//     menuIcon.style.display = "none";
-//   }
-// }
-
 function visible(){
-    document.querySelector(".main-nav").style.cssText = "display:block"
-    document.querySelector("#closed").style.cssText = "display:block";
+    document.querySelector(".burgermenu").style.cssText = `    
+    display:flex;
+    flex-direction: column;  
+    `;
+    document.querySelector("#closed").style.cssText = "display:block; z-index:100";
+    document.querySelector(".main-nav").style.cssText = "none;";
 }
 
 function invisible(){
-    document.querySelector(".main-nav").style.cssText = "display:none"
+    document.querySelector(".burgermenu").style.cssText = "display:none";
     document.querySelector("#closed").style.cssText = "display:none";
+    // document.querySelector(".main-nav").style.cssText ="display:flex;";
 }
+
+const menuIcon = document.querySelector("#burger");
+const closeIcon= document.querySelector("#closed");
 
 menuIcon.addEventListener("click", visible);
 closeIcon.addEventListener("click", invisible);
 
-mainnav.addEventListener("click", toggleMenu);
-// closeIcon.addEventListener("click", toggleMenu);
-// menuIcon.addEventListener("click", toggleMenu);
 
-menuItems.forEach( 
-    function(menuItem) { 
-      menuItem.addEventListener("click", toggleMenu);
-    }
-  )
+const showboxbtn = document.querySelector('#showbtn')
+function showbox(){
+    document.querySelector(".hidden-container").style.cssText = "display:flex";
+}
+
+showboxbtn.addEventListener("click",showbox);

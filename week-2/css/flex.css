@@ -5,6 +5,13 @@
     justify-content: center ;
 }
 
+.hidden-container{
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center ;
+}
+
 .content-box{
     height: 200px;
     width: 600px;
@@ -27,19 +34,12 @@
 }
 
 @media (min-width:800px){
+    #burger, #closed{
+        display:none;
+    }
+
     .main-nav{
         display: flex;
-        /* position:absolute;
-        transform: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 99;
-        background: none;
-        color: white;
-        list-style: none;
-        padding-top: 0; */
     }
     label{
         display: none;
@@ -55,7 +55,7 @@
 
     .content-box{
         width:100%;
-        flex: 1 0 600px;
+        flex: 1 1 40%;
         max-width: 600px;
         align-self: center;
     }    

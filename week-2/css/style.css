@@ -4,12 +4,14 @@
 
 .main-header{
     height: 50px;
+    width:100%;
 }
 
 #burger,#closed{
     font-size: 35px;
     margin:0.5rem 0.5rem;
     position: absolute;
+    /* z-index:100; */
     right: 3%;
 }
 
@@ -17,7 +19,8 @@
     display: none;
 }
 
-.main-nav{
+.burgermenu{
+  display: none;
   position: fixed;
   transform: translateX(50%);
   transition: transform 0.2s;
@@ -26,7 +29,7 @@
   right: 0;
   bottom: 0;
   z-index: 99;
-  background: rgb(219, 93, 93);
+  background: rgb(222, 169, 169);
   color: white;
   list-style: none;
   padding-top: 4rem;
@@ -37,7 +40,7 @@ ul{
     padding:0;
     list-style: none;
 }
-.main-nav a{
+.main-nav a,.burgermenu a{
     margin: 5px;
     display: block;
     padding:10px 15px;
@@ -77,9 +80,9 @@ h2 {
     font-size: medium;
 }
 
-/* .main-nav{
+.main-nav{
     display: none;    
-} */
+}
 
 button{
     position:relative;
