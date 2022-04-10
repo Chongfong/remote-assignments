@@ -1,0 +1,19 @@
+Num<br>
+<input type="number" id="getnum" placeholder="Enter numbers"/>
+<button onclick="getnumber()">Click</button>
+
+<p id="resnum"></p>
+
+<script>
+    function getnumber(){
+        const count = document.getElementById("getnum").value;
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){
+            if (xhr.status === 200 && xhr.readyState == 4){
+                document.getElementById("resnum").innerHTML = this.responseText;
+            }
+        }
+        xhr.open('get',`http://localhost:3000/getData?number=${count}`,true);
+        xhr.send();
+    };
+</script>
