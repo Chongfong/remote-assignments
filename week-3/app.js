@@ -17,12 +17,10 @@ app.get('/getData',(req,res)=>{
   const querynum = Number(req.query.number);
   if (Object.keys(req.query).length === 0){
     res.send('<h1>Lack of Parameter</h1>');
-  }else if (Number.isInteger(querynum)===true){
+  }else if (Number.isInteger(querynum)===true && Number(req.query.number)>0) {
     res.send(`${(querynum*(querynum+1))/2}`);
-  }else if(req.query.number === "xyz"){
-    res.send('<h1>Wrong Parameter</h1>');
   }else{
-    res.send('<h1>This is not an Interger</h1>');
+    res.send('<h1>Wrong Parameter</h1>');
   };
 })
 
