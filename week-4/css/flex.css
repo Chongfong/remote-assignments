@@ -10,6 +10,9 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center ;
+    width: 100%;
+    max-width: 1300px;
+    margin:auto;
 }
 
 .content-box{
